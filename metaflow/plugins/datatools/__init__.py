@@ -15,7 +15,7 @@ def read_in_chunks(dst, src, src_sz, max_chunk_size):
         remaining -= len(buf)
 
 
-from .s3 import MetaflowS3Exception, S3
+from .s3.s3 import MetaflowS3Exception, S3
 
 # Import any additional datatools defined by a Metaflow extensions package
 try:

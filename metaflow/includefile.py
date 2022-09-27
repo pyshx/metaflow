@@ -164,7 +164,7 @@ class Local(object):
 
 
 # From here on out, this is the IncludeFile implementation.
-from .datatools import S3
+from metaflow.plugins.datatools import S3
 
 DATACLIENTS = {"local": Local, "s3": S3, "azure": Azure}
 

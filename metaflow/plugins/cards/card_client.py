@@ -1,5 +1,6 @@
-from metaflow.datastore import DATASTORES, FlowDataStore
+from metaflow.datastore import FlowDataStore
 from metaflow.metaflow_config import DATASTORE_CARD_SUFFIX
+from metaflow.plugins import DATASTORES
 from .card_resolver import resolve_paths_from_task, resumed_info
 from .card_datastore import CardDatastore
 from .exception import (
@@ -273,7 +274,7 @@ def _get_flow_datastore(task):
     else:
         ds_root = CardDatastore.get_storage_root(ds_type)
 
-    storage_impl = DATASTORES[ds_type]
+    storage_impl = [d for d in DATASTORES if d.TYPE == ds_type][0]
     return FlowDataStore(
         flow_name=flow_name,
         environment=None,  # TODO: Add environment here

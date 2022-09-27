@@ -108,7 +108,7 @@ from .parameters import Parameter, JSONTypeClass
 JSONType = JSONTypeClass()
 
 # data layer
-from .datatools import S3
+from .plugins.datatools import S3
 
 # includefile
 from .includefile import IncludeFile
