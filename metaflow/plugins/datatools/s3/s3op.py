@@ -28,7 +28,7 @@ except:
 if __name__ == "__main__":
     # When launched standalone, point to our parent metaflow
     sys.path.insert(
-        0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+        0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../"))
     )
 
 from metaflow._vendor import click
