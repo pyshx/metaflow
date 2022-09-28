@@ -72,7 +72,7 @@ cli_add("batch", ".aws.batch.batch_cli", "cli")
 cli_add("kubernetes", ".kubernetes.kubernetes_cli", "cli")
 cli_add("step-functions", ".aws.step_functions.step_functions_cli", "cli")
 cli_add("airflow", ".airflow.airflow_cli", "cli")
-cli_add("argo", ".argo.argo_workflows_cli", "cli")
+cli_add("argo-workflows", ".argo.argo_workflows_cli", "cli")
 cli_add("card", ".cards.card_cli", "cli")
 cli_add("tag", ".tag_cli", "cli")
 
