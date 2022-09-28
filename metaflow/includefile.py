@@ -104,7 +104,7 @@ class Local(object):
     def get_root_from_config(cls, echo, create_on_absent=True):
         result = DATATOOLS_LOCALROOT
         if result is None:
-            from .datastore.local_storage import LocalStorage
+            from metaflow.plugins.datastores.local_storage import LocalStorage
 
             result = LocalStorage.get_datastore_root_from_config(echo, create_on_absent)
             result = os.path.join(result, DATATOOLS_SUFFIX)
@@ -164,7 +164,7 @@ class Local(object):
 
 
 # From here on out, this is the IncludeFile implementation.
-from metaflow.plugins.datatools import S3
+from metaflow.plugins.datatools.s3 import S3
 
 DATACLIENTS = {"local": Local, "s3": S3, "azure": Azure}
 

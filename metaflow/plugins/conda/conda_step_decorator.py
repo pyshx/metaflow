@@ -23,7 +23,7 @@ from metaflow.metaflow_config import (
 )
 
 from metaflow.util import get_metaflow_root
-from metaflow.datastore import LocalStorage
+from metaflow.plugins.datastores.local_storage import LocalStorage
 
 from ..env_escape import generate_trampolines
 from . import read_conda_manifest, write_to_conda_manifest, get_conda_package_root

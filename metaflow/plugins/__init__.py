@@ -193,8 +193,8 @@ def _lazy_plugin_resolve(category):
             raise ValueError("'%s' not found in module '%s'" % (cls_name, path))
         if name_extractor and name_extractor(cls) != name:
             raise ValueError(
-                "Importing '%s' from '%s': expected name to be '%s' but got '%s' instead"
-                % (cls_name, path, name_extractor(cls), name)
+                "%s.%s: expected name to be '%s' but got '%s' instead"
+                % (path, cls_name, name, name_extractor(cls))
             )
         globals()[cls_name] = cls
         if name_extractor is not None:

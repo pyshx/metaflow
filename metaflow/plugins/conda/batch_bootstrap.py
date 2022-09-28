@@ -51,7 +51,7 @@ def download_conda_packages(flow_name, env_id, datastore_type):
         # workfaround.
         # https://github.com/Netflix/metaflow/commit/fbd6c9d8a819fad647958c9fa869153ab37bc0ca#diff-1ecbb40de8aba5b41e149987de4aa797a47f4498e5e4e3f63a53d4283dcdf941R198
         if env["cache_urls"][0].startswith("s3://"):
-            from metaflow.plugins.datatools import S3
+            from metaflow.plugins.datatools.s3 import S3
 
             with S3() as s3:
                 for pkg in s3.get_many(env["cache_urls"]):

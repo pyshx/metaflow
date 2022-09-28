@@ -3,7 +3,6 @@ import os
 
 from metaflow.metaflow_config import DATASTORE_LOCAL_DIR, DATASTORE_SYSROOT_LOCAL
 from metaflow.datastore.datastore_storage import CloseAfterUse, DataStoreStorage
-from metaflow.datastore.exceptions import DataException
 
 
 class LocalStorage(DataStoreStorage):
