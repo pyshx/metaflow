@@ -111,7 +111,7 @@ JSONType = JSONTypeClass()
 # For historical reasons, we make metaflow.plugins.datatools accessible as
 # metaflow.datatools. S3 is also a tool that has historically been available at the
 # TL so keep as is.
-from .plugins import datatools
+lazy_load_aliases({"metaflow.datatools": "metaflow.plugins.datatools"})
 from .plugins.datatools import S3
 
 # includefile
