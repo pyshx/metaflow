@@ -68,7 +68,7 @@ add_plugin_support(globals())
 
 # Add new CLI commands here
 cli_add("package", ".package_cli", "cli")
-cli_add("batch", ".aws.batch_cli", "cli")
+cli_add("batch", ".aws.batch.batch_cli", "cli")
 cli_add("kubernetes", ".kubernetes.kubernetes_cli", "cli")
 cli_add("step-functions", ".aws.step_functions.step_functions_cli", "cli")
 cli_add("airflow", ".airflow.airflow_cli", "cli")
