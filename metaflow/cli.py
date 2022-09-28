@@ -913,7 +913,7 @@ def version(obj):
     "--datastore",
     default=DEFAULT_DATASTORE,
     show_default=True,
-    type=click.Choice(DATASTORES),
+    type=click.Choice([d.TYPE for d in DATASTORES]),
     help="Data backend type",
 )
 @click.option("--datastore-root", help="Root path for datastore")
